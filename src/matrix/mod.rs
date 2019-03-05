@@ -42,6 +42,7 @@ pub enum Axes {
 ///
 /// Can be instantiated with any type.
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
+#[cfg_attr(feature="serde", derive(Serialize, Deserialize))]
 pub struct Matrix<T> {
     rows: usize,
     cols: usize,

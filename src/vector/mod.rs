@@ -10,6 +10,7 @@ mod impl_vec;
 ///
 /// Can be instantiated with any type.
 #[derive(Debug, PartialEq, Eq, Hash)]
+#[cfg_attr(feature="serde", derive(Serialize, Deserialize))]
 pub struct Vector<T> {
     size: usize,
     data: Vec<T>,

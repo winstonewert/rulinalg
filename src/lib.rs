@@ -123,3 +123,7 @@ extern crate rustc_serialize;
 
 #[cfg(feature = "io")]
 pub mod io;
+
+#[cfg(feature="serde")]
+#[macro_use]
+extern crate serde;
